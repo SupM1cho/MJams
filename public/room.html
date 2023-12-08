@@ -1,0 +1,49 @@
+<!-- room.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/scripts/room.js"></script>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <header>
+    <div id="room-info">
+      <h1>Room: <span id="room-name"></span></h1>
+    </div>
+    <div id="user-info">
+      <span id="user-nickname"></span>
+      <button id="logout-btn">Logout</button>
+    </div>
+  </header>
+
+  <section id="chat-section">
+    <h2>Live Chat</h2>
+    <ul id="chat-messages"></ul>
+    <form id="message-form">
+      <input id="message-input" type="text" placeholder="Type your message...">
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section id="music-section">
+    <h2>Music Player</h2>
+
+    <!-- Player Controls -->
+    <div id="player-controls">
+      <button id="play-btn">Play</button>
+      <button id="pause-btn">Pause</button>
+      <button id="skip-btn">Skip</button>
+    </div>
+
+    <!-- Queue -->
+    <h3>Song Queue</h3>
+    <ul id="song-queue"></ul>
+  </section>
+
+</body>
+</html>

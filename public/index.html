@@ -1,0 +1,41 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ... (existing head content) ... -->
+  <title>My Music Sharing App</title>
+  <!-- Add the Socket.IO script -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Add your main.js script -->
+  <script src="/scripts/main.js"></script>
+  <!-- Add your style.css for styling -->
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Music Sharing App</h1>
+    <div id="nickname-display"></div> <!-- Display nickname here -->
+  </header>
+
+  <section id="music-section">
+    <h2>Create Music Session</h2>
+
+    <!-- Music Session Creation Form -->
+    <form id="create-session-form" action="/create-session" method="POST">
+      <label for="session-name">Session Name:</label>
+      <input id="session-name" type="text" placeholder="Enter session name" required>
+
+      <button type="submit">Create Session</button>
+    </form>
+
+    <!-- Display Session List -->
+    <h3>Session List</h3>
+    <ul id="session-list">
+      <!-- Display session names dynamically using JavaScript -->
+      <!-- Example: <li>Session 1</li> -->
+    </ul>
+  </section>
+
+</body>
+</html>
